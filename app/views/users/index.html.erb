@@ -1,0 +1,10 @@
+<h2>Users</h2>
+
+  <% @users.each do |user| %>
+    <h3/><%= link_to user[:name],user_path(user)%></h3>
+    <p><%= user[:age] %></P>
+  <% end %>
+
+
+<%= link_to 'Add User', new_user_path %>
+<br/>
